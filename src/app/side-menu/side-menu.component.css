@@ -1,0 +1,94 @@
+.container {
+    display: flex; /* Aseguramos que el menú y el contenido estén en fila */
+    height: 100vh; /* Ocupar toda la altura de la pantalla */
+    width: 100vw; /* Ocupar toda la anchura de la pantalla */
+  }
+  
+.sidemenu-container {
+    width: 50%;
+    height: 100vh;
+    background-color: #6C3B2A;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+      
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+    width: auto;
+    gap: 10px;
+    padding: 10px 0; /* Espaciado entre ítems */
+    color: white; /* Color de texto blanco */
+  }
+  
+  .item span {
+    font-size: 1.5rem;
+  }
+  
+  .item p {
+    font-size: 20px;
+    font-weight: bold;
+    text-wrap: wrap;
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    color: white; /* Asegurar que el texto sea visible sobre el fondo */
+  }
+  
+  img {
+    width: 50px; /* Tamaño de la imagen de perfil */
+    height: 50px;
+    border-radius: 50%; /* Hacer la imagen circular */
+  }
+  
+  .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco para los botones */
+    color: #0072ff; /* Texto del botón en azul */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #f0f0f0; /* Efecto hover más claro */
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .back-button:hover {
+    opacity: 0.8;
+  }
+
+  .btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: 400px;
+    margin-top: 0%;
+  }
+  
+  .main-content h1 {
+    font-size: 5rem;
+    color: #555555; /* Color del texto */
+    opacity: 0.7;
+    justify-content: center;
+
+  }
