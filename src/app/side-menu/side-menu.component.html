@@ -1,15 +1,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <button (click)="setVisibilityMenu()">Menu</button>
+<div class="palabra" [ngClass]="{ 'centered': visibleMenu }" [style.marginLeft]="marginLeft + 'px'"> 
+  <p>Ejercicio 2</p>
+</div>
 <div class="sidemenu-container"
-     [style.background-color]="theme"
+     [style.backgroundColor]="theme"
      [style.width]="widthMenu + 'px'"
      [style.display]="visibleMenu ? 'flex' : 'none'">
 
     <div class="item">
         <img src="https://i.pinimg.com/564x/a2/35/d6/a235d6b6f5739f50a683e50197f4ec3f.jpg" alt="Perfil">
         <p>{{username}}</p>
-        <button (click)="setVisibilityMenu()" class="fa-solid fa-arrow-left" > </button>
+        <button (click)="setVisibilityMenu()" class="fa-solid fa-arrow-left"></button>
     </div>
 
     <div class="item">
@@ -17,19 +19,15 @@
     </div>
 
     <div class="item">
-        <p class="fa-duotone fa-solid fa-ghost"> Perfil</p>
-        
+        <p><i class="fa-duotone fa-ghost"></i> Perfil</p>
     </div>
     
     <div class="item">
         <button class="btn" (click)="setThemeColor('#e6b68b')">Change Color</button> 
         <button class="btn" (click)="setSizeMenu()">Change Size</button>
     </div>
-
-    <div class="main-content">
-        <h1>Ejercicio 2</h1> <!-- Texto centralizado "Ejercicio 2" -->
-      </div>
 </div>
+
 
 
 

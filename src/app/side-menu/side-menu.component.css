@@ -1,94 +1,172 @@
-.container {
-    display: flex; /* Aseguramos que el menú y el contenido estén en fila */
-    height: 100vh; /* Ocupar toda la altura de la pantalla */
-    width: 100vw; /* Ocupar toda la anchura de la pantalla */
-  }
-  
+/* General Container */
+
+
+/* Lateral Menu */
 .sidemenu-container {
-    width: 50%;
+    width: 280px;
     height: 100vh;
-    background-color: #6C3B2A;
+    background-color: #4a2c2a; /* Color de fondo más oscuro y elegante */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-  }
-      
-  .item {
+    padding: 20px; /* Espaciado interior para más aire */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.item {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-left: 1rem;
-    width: auto;
-    gap: 10px;
-    padding: 10px 0; /* Espaciado entre ítems */
-    color: white; /* Color de texto blanco */
-  }
-  
-  .item span {
-    font-size: 1.5rem;
-  }
-  
-  .item p {
-    font-size: 20px;
-    font-weight: bold;
-    text-wrap: wrap;
-    width: 50%;
-    display: flex;
-    gap: 1rem;
-    color: white; /* Asegurar que el texto sea visible sobre el fondo */
-  }
-  
-  img {
-    width: 50px; /* Tamaño de la imagen de perfil */
-    height: 50px;
-    border-radius: 50%; /* Hacer la imagen circular */
-  }
-  
-  .btn {
-    margin: 10px;
-    padding: 10px 20px;
+    margin-bottom: 15px; /* Espaciado entre ítems */
+    padding: 10px 15px;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #6C3B2A; /* Fondo de ítem con ligera diferencia */
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
+}
+
+.item:hover {
+    background-color: #8C4F4A; /* Fondo de ítem en hover */
+    transform: scale(1.02); /* Efecto de aumento al pasar el cursor */
+}
+
+.item img {
+    width: 40px; /* Tamaño de la imagen reducido */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Espacio entre imagen y texto */
+}
+
+.item span {
+    font-size: 1.2rem;
+}
+
+.item p {
     font-size: 1rem;
-    border-radius: 20px; /* Bordes redondeados */
-    background-color: white; /* Fondo blanco para los botones */
-    color: #0072ff; /* Texto del botón en azul */
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+/* Botones */
+.btn {
+    margin: 10px 0;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px; /* Bordes redondeados más pronunciados */
+    background-color: #4aa090; /* Fondo azul atractivo */
+    color: white;
     border: none;
     cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #f0f0f0; /* Efecto hover más claro */
-  }
-  
-  .back-button {
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+}
+
+.btn:hover {
+    background-color: #005bb5; /* Fondo más oscuro en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+/* Botón de regreso */
+.back-button {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    color: #0072ff; /* Color del texto azul */
+    font-size: 1.25rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* General Styles */
+.palabra {
+    transition: margin-left 0.3s ease;
+}
+
+.centered {
+    text-align: center;
+    font-size: 1.5rem; /* Ajusta según tu diseño */
+}
+
+/* Side Menu Container */
+.sidemenu-container {
+    position: fixed; /* Fija el menú lateral */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #4a2c2a; /* Color de fondo del menú lateral */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: width 0.3s ease; /* Transición suave para el cambio de tamaño */
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaciado entre ítems */
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #6C3B2A;
     color: white;
-    font-size: 20px;
-  }
-  
-  .back-button:hover {
-    opacity: 0.8;
-  }
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-  .btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    margin-left: 400px;
-    margin-top: 0%;
-  }
-  
-  .main-content h1 {
-    font-size: 5rem;
-    color: #555555; /* Color del texto */
-    opacity: 0.7;
-    justify-content: center;
+.item:hover {
+    background-color: #8C4F4A;
+    transform: scale(1.02);
+}
 
-  }
+.item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.item p {
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+/* Button Styles */
+.btn {
+    margin: 10px 0;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Font Awesome Icons */
+.fa-arrow-left {
+    font-size: 1.25rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-ghost {
+    font-size: 1rem;
+}
